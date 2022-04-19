@@ -1,31 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
-      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+
     <title>Instagram</title>
   </head>
+  <!-- *****NAVBAR***** -->
+  <div
+    class="modal fade"
+    id="exampleModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <textarea class="w-100" name="" id="" cols="30" rows="3"></textarea>
+          <br />
+          <button class="btn btn-outline-dark fs-5">
+            <i class="bi bi-camera-fill"></i>
+          </button>
+          <button class="btn btn-outline-dark fs-5">
+            <i class="bi bi-geo-alt-fill"></i>
+          </button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-light" data-bs-dismiss="modal">
+            Cancel
+          </button>
+          <button type="button" class="btn btn-success">Publish</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <body>
+    <nav class="navbar navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand text-secondary" href="#">
+          <i class="bi bi-instagram"></i>
+          <i class="fw-bold">Instagram</i>
+        </a>
+        <button
+          type="button"
+          class="btn btn-success ms-auto"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          Create a new post
+        </button>
+        <div class="dropdown">
+          <a
+            class="btn btn-light dropdown-toggle text-secondary"
+            type="button"
+            id="dropdownMenu2"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <i class="bi bi-gear-fill"></i>
+          </a>
+
+          <ul
+            class="dropdown-menu dropdown-menu-end"
+            aria-labelledby="dropdownMenu2"
+          >
+            <li><button class="dropdown-item" type="button">Action</button></li>
+            <li>
+              <button class="dropdown-item" type="button">
+                Another action
+              </button>
+            </li>
+            <li>
+              <button class="dropdown-item" type="button">
+                Something else here
+              </button>
+            </li>
+            <li><hr class="dropdown-divider" /></li>
+            <li>
+              <button class="dropdown-item" type="button">Logout</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- *****TOGGLE VIEW***** -->
+    <ul
+      class="container nav nav-pills my-3 justify-content-center"
+      id="pills-tab"
+      role="tablist"
+    >
+      <li class="nav-item" role="presentation">
+        <button
+          class="btn btn-outline-secondary border-0 active"
+          id="pills-grid-tab"
+          data-bs-toggle="pill"
+          data-bs-target="#pills-grid"
+          type="button"
+          role="tab"
+          aria-controls="pills-grid"
+          aria-selected="true"
+        >
+          <i class="bi bi-grid-3x3-gap-fill"></i>
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="btn btn-outline-secondary border-0"
+          id="pills-list-tab"
+          data-bs-toggle="pill"
+          data-bs-target="#pills-list"
+          type="button"
+          role="tab"
+          aria-controls="pills-list"
+          aria-selected="false"
+        >
+          <i class="bi bi-square-fill"></i>
+        </button>
+      </li>
+    </ul>
+    <!-- *****FEED***** -->
+    <div class="container-fluid">
+      <div class="tab-content" id="pills-tabContent">
+        <div
+          class="tab-pane fade show active"
+          id="pills-grid"
+          role="tabpanel"
+          aria-labelledby="pills-grid-tab"
+        >
+          <!-- GRID -->
+          <div class="container-fluid p-0 d-grid gap-1">
+            <div class="row gap-1">
+              <div class="col p-0">
+                <img src="img/img1.jpg" class="card-img" alt="..." />
+              </div>
+              <div class="col p-0">
+                <img src="img/img2.jpg" class="card-img" alt="..." />
+              </div>
+              <div class="col p-0">
+                <img src="img/img3.jpg" class="card-img" alt="..." />
+              </div>
+            </div>
+            <div class="row gap-1">
+              <div class="col p-0">
+                <img src="img/img4.jpg" class="card-img" alt="..." />
+              </div>
+              <div class="col p-0">
+                <img src="img/img5.jpg" class="card-img" alt="..." />
+              </div>
+              <div class="col p-0">
+                <img src="img/img3.jpg" class="card-img" alt="..." />
+              </div>
+            </div>
+            <div class="row gap-1">
+              <div class="col p-0">
+                <img src="img/img6.jpg" class="card-img" alt="..." />
+              </div>
+              <div class="col p-0">
+                <img src="img/img7.jpg" class="card-img" alt="..." />
+              </div>
+              <div class="col p-0">
+                <img src="img/img8.jpg" class="card-img" alt="..." />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="pills-list"
+          role="tabpanel"
+          aria-labelledby="pills-list-tab"
+        >
+          <!-- LIST -->
+          <div class="container-fluid bg-light">
+            <h1>LIST</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
-      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
-      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
   </body>
